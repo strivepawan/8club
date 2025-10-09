@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "title": "Big Buck Bunny",
+    "thumbnailUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Big_Buck_Bunny_thumbnail_vlc.png/1200px-Big_Buck_Bunny_thumbnail_vlc.png",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+    "category": "Trending Now"
+  },
+  {
+    "id": "2",
+    "title": "Elephants Dream",
+    "thumbnailUrl": "https://i.ytimg.com/vi/dv_gOBi8flU/maxresdefault.jpg",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+    "category": "Trending Now"
+  },
+  {
+    "id": "3",
+    "title": "For Bigger Blazes",
+    "thumbnailUrl": "https://i.ytimg.com/vi/Dr91pg6_t3g/maxresdefault.jpg",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    "category": "New Releases"
+  },
+  {
+    "id": "4",
+    "title": "For Bigger Fun",
+    "thumbnailUrl": "https://i.ytimg.com/vi/XSGBVzeBUbk/maxresdefault.jpg",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
+    "category": "New Releases"
+  },
+  {
+    "id": "5",
+    "title": "Sintel",
+    "thumbnailUrl": "https://i.ytimg.com/vi/eRsGyueVLvQ/maxresdefault.jpg",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
+    "category": "Must Watch"
+  },
+  {
+    "id": "6",
+    "title": "Tears of Steel",
+    "thumbnailUrl": "https://i.ytimg.com/vi/1_8B2A6gY8s/maxresdefault.jpg",
+    "videoUrl": "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    "category": "Must Watch"
+  }
+]
