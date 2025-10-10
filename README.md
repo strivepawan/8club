@@ -84,6 +84,8 @@ cd flick_tv_ott
 
 ## 📱 App Screenshots
 
+
+
 <p align="center">
   <img src="./assets/screenshots/homeScreen.jpg" alt="Home Screen" width="250"/>
   <img src="./assets/screenshots/detail%20screen.jpg" alt="Detail Screen" width="250"/>
