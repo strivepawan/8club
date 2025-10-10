@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:video_player/video_player.dart';
 import 'package:chewie/chewie.dart';
+
 import '../../domain/entities/video_entity.dart';
 
 class PlayerPage extends StatelessWidget {
   static const routeName = '/player';
+
   final List<VideoEntity> videos;
   final int initialIndex;
 
@@ -31,10 +32,13 @@ class PlayerPage extends StatelessWidget {
   }
 }
 
-
 class VideoPlayerItem extends StatefulWidget {
   final VideoEntity video;
-  const VideoPlayerItem({super.key, required this.video});
+
+  const VideoPlayerItem({
+    super.key,
+    required this.video,
+  });
 
   @override
   State<VideoPlayerItem> createState() => _VideoPlayerItemState();
@@ -47,16 +51,10 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
   @override
   void initState() {
     super.initState();
-    
-    // Set to landscape mode
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.landscapeRight,
-    ]);
+    _initializePlayer();
+  }
 
-    // ⭐️ 1. ANDROID-SPECIFIC: ENTER IMMERSIVE FULLSCREEN MODE
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
-
+  void _initializePlayer() {
     _videoPlayerController = VideoPlayerController.networkUrl(
       Uri.parse(widget.video.videoUrl),
     );
@@ -65,21 +63,13 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
       videoPlayerController: _videoPlayerController,
       autoPlay: true,
       looping: true,
-      fullScreenByDefault: true, 
-      allowedScreenSleep: false,
+      showControls: true,
+      aspectRatio: 16 / 9,
     );
   }
 
   @override
   void dispose() {
-    
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-
-    SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
-
     _videoPlayerController.dispose();
     _chewieController.dispose();
     super.dispose();
