@@ -84,12 +84,11 @@ cd flick_tv_ott
 
 ## 📱 App Screenshots
 
-Here’s a quick look at the **Flick TV OTT** Flutter app in action 👇  
-
 <p align="center">
-  <img src="assets/screenshots/homeScreen.jpg" alt="Home Screen" width="250" style="margin: 10px; border-radius: 12px;"/>
-  <img src="assets/screenshots/detail screen.jpg" alt="Detail Screen" width="250" style="margin: 10px; border-radius: 12px;"/>
-  <img src="assets/screenshots/viedo play.jpg" alt="Video Player" width="250" style="margin: 10px; border-radius: 12px;"/>
-  <img src="assets/screenshots/comming soon.jpg" alt="Coming Soon" width="250" style="margin: 10px; border-radius: 12px;"/>
+  <img src="./assets/screenshots/homeScreen.jpg" alt="Home Screen" width="250"/>
+  <img src="./assets/screenshots/detail%20screen.jpg" alt="Detail Screen" width="250"/>
+  <img src="./assets/screenshots/viedo%20play.jpg" alt="Video Player" width="250"/>
+  <img src="./assets/screenshots/comming%20soon.jpg" alt="Coming Soon" width="250"/>
 </p>
+
 
