@@ -5,7 +5,6 @@ import '../../domain/entities/video_entity.dart';
 
 class HeroBanner extends StatelessWidget {
   final VideoEntity featuredVideo;
-  // ⭐️ We now require the full list of videos for navigation
   final List<VideoEntity> allVideos;
 
   const HeroBanner({
@@ -16,7 +15,6 @@ class HeroBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // This is the function that will handle navigation
     void navigateToDetails() {
       Navigator.of(context).pushNamed(
         DetailsPage.routeName,
@@ -31,7 +29,6 @@ class HeroBanner extends StatelessWidget {
       onTap: navigateToDetails, // Make the whole banner tappable
       child: Stack(
         children: [
-          // Background Image (no changes here)
           Image.network(
             featuredVideo.thumbnailUrl,
             height: 450,
@@ -40,7 +37,6 @@ class HeroBanner extends StatelessWidget {
             errorBuilder: (context, error, stackTrace) =>
                 Container(height: 450, color: Colors.grey.shade900),
           ),
-          // Gradient Overlay (no changes here)
           Container(
             height: 450,
             decoration: BoxDecoration(
@@ -58,18 +54,16 @@ class HeroBanner extends StatelessWidget {
               ),
             ),
           ),
-          // Content on top
+        
           Positioned(
             bottom: 20,
             left: 0,
             right: 0,
             child: Column(
               children: [
-                // Text content (no changes here)
                 Text(
                   'HINDI & TAMIL',
                   style: TextStyle(
-                    // ignore: deprecated_member_use
                     color: Colors.white.withOpacity(0.9),
                     fontSize: 14,
                   ),
@@ -91,7 +85,6 @@ class HeroBanner extends StatelessWidget {
                   style: TextStyle(color: Colors.white70, fontSize: 12),
                 ),
                 const SizedBox(height: 20),
-                // Buttons Row
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -104,7 +97,6 @@ class HeroBanner extends StatelessWidget {
                       ),
                       icon: const Icon(Icons.play_arrow),
                       label: const Text('Play'),
-                      // ⭐️ UPDATED: Call the navigation function
                       onPressed: navigateToDetails,
                     ),
                     const SizedBox(width: 12),
@@ -117,7 +109,7 @@ class HeroBanner extends StatelessWidget {
                       ),
                       icon: const Icon(Icons.add),
                       label: const Text('My List'),
-                      // ⭐️ UPDATED: Call the navigation function
+                   
                       onPressed: navigateToDetails,
                     )
                   ],

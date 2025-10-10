@@ -17,7 +17,6 @@ class CarouselSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // We can still limit videos if we want, but it's optional
     final limitedVideos = videos.length > 10 ? videos.sublist(0, 10) : videos;
 
     return Column(
@@ -35,7 +34,6 @@ class CarouselSection extends StatelessWidget {
           ),
         ),
 
-        // ⭐️ Using ListView with a fixed height and fixed-width children
         SizedBox(
           height: 180, // A good height for portrait thumbnails
           child: ListView.builder(
@@ -44,14 +42,12 @@ class CarouselSection extends StatelessWidget {
             itemBuilder: (context, index) {
               final video = limitedVideos[index];
               return Padding(
-                // This padding ensures the list starts from the edge correctly
                 padding: EdgeInsets.only(
                   left: index == 0 ? 16.0 : 8.0,
                   right: index == limitedVideos.length - 1 ? 16.0 : 0,
                 ),
-                // ⭐️ This SizedBox is the key: it gives each item a fixed width
                 child: SizedBox(
-                  width: 110, // A good width for a compact, dense list
+                  width: 110, 
                   child: VideoThumbnail(
                     video: video,
                     allVideos: allVideos,

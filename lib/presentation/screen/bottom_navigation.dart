@@ -27,7 +27,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
     _homeScrollController = ScrollController();
     _homeScrollController.addListener(_scrollListener);
 
-    // Initialize pages here to pass the scroll controller
     _pages = <Widget>[
       HomePage(),
       const ComingSoonPage(title: 'Movies'),
@@ -43,7 +42,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
   }
 
   void _scrollListener() {
-    // Hide navbar when scrolling down (reverse)
     if (_homeScrollController.position.userScrollDirection ==
         ScrollDirection.reverse) {
       if (_isNavBarVisible) {
@@ -52,7 +50,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
         });
       }
     }
-    // Show navbar when scrolling up (forward)
     else if (_homeScrollController.position.userScrollDirection ==
         ScrollDirection.forward) {
       if (!_isNavBarVisible) {
@@ -71,14 +68,12 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Use PopScope for custom back button logic
     return PopScope(
       canPop: _selectedIndex == 0,
       onPopInvoked: (didPop) {
         if (didPop) {
           return; // If it did pop, do nothing.
         }
-        // If it did not pop, switch to the home tab.
         if (_selectedIndex != 0) {
           _onItemTapped(0);
         }
@@ -88,7 +83,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
           index: _selectedIndex,
           children: _pages,
         ),
-        // Animate the bottom navigation bar for a smooth hide/show effect
         bottomNavigationBar: AnimatedContainer(
           duration: const Duration(milliseconds: 300),
           height: _isNavBarVisible ? kBottomNavigationBarHeight : 0,

@@ -30,22 +30,19 @@ class VideoThumbnail extends StatelessWidget {
         child: Stack(
           alignment: Alignment.bottomCenter,
           children: [
-            // ⭐️ 2. REPLACE Image.network WITH CachedNetworkImage
+            
             AspectRatio(
               aspectRatio: 2 / 3,
               child: CachedNetworkImage(
                 imageUrl: video.thumbnailUrl, // Use imageUrl property
                 fit: BoxFit.cover,
-                // Show a loading spinner while the image is downloading for the first time
                 placeholder: (context, url) => const Center(
                   child: CircularProgressIndicator(strokeWidth: 2.0),
                 ),
-                // Show an error icon if the image fails to load
                 errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
             
-            // The rest of your code (gradient, title, logo) remains the same
             Positioned.fill(
               child: Container(
                 decoration: BoxDecoration(

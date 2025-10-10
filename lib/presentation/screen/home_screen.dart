@@ -24,7 +24,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // ⭐️ New custom AppBar to match the screenshot
+      
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -45,26 +45,23 @@ class _HomePageState extends State<HomePage> {
             final allVideos =
                 state.categorizedVideos.values.expand((v) => v).toList();
             
-            // Get the first video from the list to be our featured hero
             final featuredVideo = allVideos.isNotEmpty ? allVideos.first : null;
 
-            // Use a ListView to stack all our content vertically
             return ListView(
-              padding: EdgeInsets.zero, // Remove top padding
+              padding: EdgeInsets.zero, 
               children: [
-                // 1. The Hero Banner is the first item
+                
                 if (featuredVideo != null) 
                 HeroBanner(
                     featuredVideo: featuredVideo,
-                    allVideos: allVideos, // ⭐️ ADD THIS LINE
+                    allVideos: allVideos,
                   ),
 
-                // 2. The Filter Chips section
                 _buildFilterChips(),
 
-                // 3. The rest of the carousels
+                
                 ...state.categorizedVideos.entries
-                  .where((entry) => entry.key != 'Featured') // Don't show "Featured" as a category
+                  .where((entry) => entry.key != 'Featured') 
                   .map((entry) {
                     return CarouselSection(
                       categoryTitle: entry.key,
@@ -84,7 +81,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  // A helper widget to build the filter chips row
   Widget _buildFilterChips() {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 16.0),

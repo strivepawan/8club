@@ -72,13 +72,12 @@ class _VideoPlayerItemState extends State<VideoPlayerItem> {
 
   @override
   void dispose() {
-    // Reset to portrait mode
+    
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
       DeviceOrientation.portraitDown,
     ]);
 
-    // ⭐️ 2. ANDROID-SPECIFIC: EXIT IMMERSIVE MODE & RESTORE SYSTEM UI
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: SystemUiOverlay.values);
 
     _videoPlayerController.dispose();

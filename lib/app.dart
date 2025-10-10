@@ -13,8 +13,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // For simplicity, we are creating instances here.
-    // In a larger app, use a service locator like get_it.
     final localDataSource = LocalDataSourceImpl();
     final videoRepository = VideoRepositoryImpl(localDataSource: localDataSource);
     final getVideosUseCase = GetVideosUseCase(videoRepository);
