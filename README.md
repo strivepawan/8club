@@ -69,6 +69,7 @@ State management is powered by **BLoC (Business Logic Component)** ensuring pred
 
 ## ⚙️ Setup & Installation
 
+
 ### 🔧 Prerequisites
 - [Flutter SDK](https://docs.flutter.dev/get-started/install)
 - Android Studio / VS Code
@@ -77,20 +78,13 @@ State management is powered by **BLoC (Business Logic Component)** ensuring pred
 ---
 
 ### 🧭 1. Clone the Repository
+
 ```bash
 git clone https://github.com/strivepawan/flick-TV-OTT.git
 cd flick_tv_ott
 
 
-## 📱 App Screenshots
 
-
-
-<p align="center">
-  <img src="./assets/screenshots/homeScreen.jpg" alt="Home Screen" width="250"/>
-  <img src="./assets/screenshots/detail%20screen.jpg" alt="Detail Screen" width="250"/>
-  <img src="./assets/screenshots/viedo%20play.jpg" alt="Video Player" width="250"/>
-  <img src="./assets/screenshots/comming%20soon.jpg" alt="Coming Soon" width="250"/>
-</p>
-
-
+apk
+Drive link 
+https://drive.google.com/file/d/11ejp3myOJ2BQ1INhS3xTjIfHDep9C_4z/view?usp=sharing
